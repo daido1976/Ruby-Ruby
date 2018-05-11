@@ -3,7 +3,3 @@ def add(x, y)
 end
 
 p add(2, 5)
-
-
-
-development!!!
