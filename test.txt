@@ -6,4 +6,4 @@ p add(2, 5)
 
 
 
-test!!!
+training!!!
