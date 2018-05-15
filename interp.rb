@@ -58,13 +58,14 @@ def evaluate(tree, genv, lenv)
     if mhd[0] == 'builtin'
       minruby_call(mhd[1], args)
     else
+      new_lenv = {}
       params = mhd[1]
       i = 0
       while params[i]
-        lenv[params[i]] = args[i]
+        new_lenv[params[i]] = args[i]
         i = i + 1
       end
-      evaluate(mhd[2], genv, lenv)
+      evaluate(mhd[2], genv, new_lenv)
     end
   when 'stmts'
     i = 1
